@@ -1,0 +1,285 @@
+/*Propiedades generales de la pagina*/
+* {
+    background-color: #1b1b32;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Aqui comienza la personalizacion del BODY de la pagina)
+Propiedades del header y de la barra de navegacion*/
+body {
+    height: 100vh;
+}
+
+header {
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 100px;
+}
+
+h2 {
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+h3 {
+    margin-top: 10px;
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+
+.nav-bar-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px;
+    box-shadow: 0px 3px 10px rgb(0 0 0 / 0.5);
+}
+
+.button-nav-bar-container {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: 50px;
+    justify-content: flex-end;
+}
+
+.button-nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px white solid;
+}
+
+.button-nav-bar:hover {
+    background-color: #40407e;
+}
+
+.img-button-nav-bar-container {
+    display: grid;
+    grid-template-columns: repeat(6, 80px);
+    grid-template-rows: 50px;
+    margin-left: 10px;
+}
+
+.img-button-nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-img-logo-social-networks {
+    height: 25px;
+    border-radius: 12px;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+}
+
+a:hover {
+    color:aqua;
+}
+
+/*Propiedades del cuerpo de la pagina (MAIN)*/
+
+main {
+    text-align: center;
+}
+
+h4 {
+    font-size: 40px;
+    padding-top: 150px;
+    margin-bottom: 50px;
+}
+
+h5 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+h6 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.services-item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    gap: 200px;
+}
+
+.services-item {
+    box-shadow: 0px 2px 30px rgb(0 0 0 / 0.5);
+    text-align: center;
+    padding: 90px 30px 0 30px;
+    height: 300px;
+    border: 1px white solid;
+    border-radius: 12px;
+}
+
+.projects-container {
+    margin: 0 100px 0 100px;
+    padding: 50px 0 50px 0;
+    box-shadow: 0px 2px 30px rgb(0 0 0 / 0.5);
+    border-radius: 12px;
+    border: 1px white solid;
+}
+
+.item {
+    width: 80%;
+    margin: auto;
+    border-radius: 12px;
+}
+
+.back-top-icon-container {
+    display: flex;
+    justify-content: right;
+    margin-right: 25px;
+    margin-top: 30px;
+}
+
+.back-top-icon {
+    height: 50px;
+}
+
+
+.footer {
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 0.5);
+    margin-top: 50px;
+}
+
+.p-footer {
+   padding: 20px 0 20px 100px;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-bar-container {
+        display: grid;
+        grid-template-columns: repeat(1, 500px);
+        justify-content: center;
+        
+    }
+
+    .services-item-container {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    .nav-bar-container {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+
+    .services-item-container {
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+
+    }
+}
+
+/*
+.projects-galery {
+    margin: auto;
+    padding: 20px;
+    height: 3150px;
+    width: 90%;
+    border: 4px white solid;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 500px);
+    gap: 20px;
+    grid-template-areas:
+    "img5 img9"
+    "img2 img2"
+    "img1 img4"
+    "img3 img3"
+    "img6 img7"
+    "img8 img8";
+}
+
+.item {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+}
+
+.item:hover{
+    transform: scale(1.05);
+    transition: 2s;
+    cursor: pointer;
+    filter: grayscale(0%);
+}
+
+.img1 {
+    grid-area: img1;
+    background-image: url(../assets/Galeria/img1.png);
+    border-radius: 10px;
+}
+
+.img2 {
+    grid-area: img2;
+    background-image: url(../assets/Galeria/img2.png);
+    border-radius: 10px;
+}
+
+.img3 {
+    grid-area: img3;
+    background-image: url(../assets/Galeria/img3.png);
+    border-radius: 10px;
+}
+
+.img4 {
+    grid-area: img4;
+    background-image: url(../assets/Galeria/img4.png);
+    border-radius: 10px;
+}
+
+.img5 {
+    grid-area: img5;
+    background-image: url(../assets/Galeria/img5.png);
+    border-radius: 10px;
+}
+
+.img6 {
+    grid-area: img6;
+    background-image: url(../assets/Galeria/img6.png);
+    border-radius: 10px;
+}
+
+.img7 {
+    grid-area: img7;
+    background-image: url(../assets/Galeria/img7.png);
+    border-radius: 10px;
+}
+
+.img8 {
+    grid-area: img8;
+    background-image: url(../assets/Galeria/img8.png);
+    border-radius: 10px;
+}
+
+.img9 {
+    grid-area: img9;
+    background-image: url(../assets/Galeria/img9.png);
+    border-radius: 10px;
+}*/

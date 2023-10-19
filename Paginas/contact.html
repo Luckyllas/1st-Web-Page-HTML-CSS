@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@100&family=Permanent+Marker&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <title>Contact</title>
+</head>
+<body> <!--Aqui simplemente una opcion mas para volver a la pagina anterior-->
+    <header>
+        <div class="back">
+            <a class="back" href="./index.html">Back</a>
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>Contact Me</h1>
+            <p>Please fill out this form with the required information</p>
+        </div>
+        <div> <!--Aqui comienza el formulario con sus casilleros de inputs, inputs de tipo radio con una unica eleccio, un input de chiking, un pequeño menu desplegable, un textarea y un submit-->
+            <form>
+                <fieldset>
+                  <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+                  <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+                  <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+                </fieldset>
+                <fieldset>
+                  <label for="male"><input id="male" type="radio" name="gender" class="inline" /> Male </label>
+                  <label for="female"><input id="female" type="radio" name="gender" class="inline" /> Female </label>
+                  <label for="terms-and-conditions">
+                    <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" class="inline" /> I accept the <a href="">terms and conditions</a>
+                  </label>
+                </fieldset>
+                <fieldset>
+                  <label for="picture">Upload a picture: <input id="picture" type="file" name="file" /></label>
+                  <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+                  <label for="referrer">How did you hear about me?
+                    <select id="referrer" name="referrer">
+                      <option value="">(select one)</option>
+                      <option value="1"> News</option>
+                      <option value="2"> YouTube Channel</option>
+                      <option value="3"> Forum</option>
+                      <option value="4">Other</option>
+                    </select>
+                  </label>
+                  <label for="bio">Provide a bio:
+                    <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+                  </label>
+                </fieldset>
+                <input type="submit" value="Submit" />
+              </form>
+        </div>
+    </main>
+    <footer>
+      <div class="footer">
+          <p class="p-footer">No Copyright - All rigths reserved 2023.</p>
+      </div>
+  </footer>
+</body>
+</html>
